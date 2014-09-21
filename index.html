@@ -1,12 +1,70 @@
-<html ng-app>
+<html ng-app="app">
 	<head>
 		<title>Angular Directives</title>
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script> <!--angular -->
-		<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script> <!--jquery -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> <!--jquery -->
 		<script type="text/javascript" src="bower_components/underscore/underscore.js"></script> <!--underscore -->
-		<link rel="stylesheet" type="text/css" src="bower_components/bootstrap/dist/css/bootstrap.min.css"><!--Bootstrap-->
+		<script type="text/javascript" src="app.js"></script>
+		<!--Bootstrap-->
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 	</head>
-	<body>
-
+	<body ng-controller="mainCtrl" class="container">
+		<div class="content">
+			<h1>Non directive</h1>
+			<ul class="nav nav-pills status-filters">
+				<li class=" active">
+					<a href>Monday<span class="desc">1</span></a>
+				</li>
+				<li>
+					<a href>Tuesday<span class="desc">2</span></a>
+				</li>
+				<li>
+					<a href>Wednsday<span class="desc">3</span></a>
+				</li>
+				<li>
+					<a href>Thursday<span class="desc">4</span></a>
+				</li>
+				<li>
+					<a href>Friday<span class="desc">5</span></a>
+				</li>
+			</ul>
+			<hr>
+			<h1>Directive Way</h1>
+			<ul class="nav nav-pills status-filters">
+				<li class=" active" tab-name="monday" tab>
+					<a href>Monday<span class="desc">1</span></a>
+				</li>
+				<li tab-name="tuesday" tab>
+					<a href>Tuesday<span class="desc">2</span></a>
+				</li>
+				<li tab-name="wednsday" tab>
+					<a href>Wednsday<span class="desc">3</span></a>
+				</li>
+				<li tab-name="thursday" tab>
+					<a href>Thursday<span class="desc">4</span></a>
+				</li>
+				<li tab-name="friday" tab>
+					<a href>Friday<span class="desc">5</span></a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="monday" class="tab-pane fade in active">
+					<h4>Monday</h4>
+				</div>
+				<div id="tuesday" class="tab-pane fade in active">
+					<h4>Tuesday</h4>
+				</div>
+				<div id="wednsday" class="tab-pane fade in active">
+					<h4>Wednsday</h4>
+				</div>
+				<div id="thursday" class="tab-pane fade in active">
+					<h4>Thursday</h4>
+				</div>
+				<div id="friday" class="tab-pane fade in active">
+					<h4>Friday</h4>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
