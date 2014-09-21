@@ -10,13 +10,17 @@
 			restrict: 'A',
 			scope: {
 				tabName: '@'
-			}
+			},
 			link: function(scope, elem, attrs) {
-				$scope.changeTab = function(tabName) {
-					$scope.currentTab = tabName;
-					$('<a href="#'+tabName+'">').tab('show');
-				};
-				console.log(elem);
+				scope.attrs = attrs;
+				elem.bind('click', function (event) {
+					console.log(scope);
+					var tabName = attrs.tabName;
+						scope.currentTab = tabName;
+						$(elem).parent().children().removeClass('active');
+						$(elem).addClass('active');
+						$('<a href="#'+tabName+'">').tab('show');
+				});
 			}
 		};
 	});

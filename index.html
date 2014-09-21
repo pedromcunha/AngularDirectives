@@ -5,6 +5,7 @@
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> <!--jquery -->
 		<script type="text/javascript" src="bower_components/underscore/underscore.js"></script> <!--underscore -->
 		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<!--Bootstrap-->
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
@@ -13,56 +14,79 @@
 		<div class="content">
 			<h1>Non directive</h1>
 			<ul class="nav nav-pills status-filters">
-				<li class=" active">
-					<a href>Monday<span class="desc">1</span></a>
+				<li class="active">
+					<a href>Monday</a>
 				</li>
 				<li>
-					<a href>Tuesday<span class="desc">2</span></a>
+					<a href>Tuesday</a>
 				</li>
 				<li>
-					<a href>Wednsday<span class="desc">3</span></a>
+					<a href>Wednsday</a>
 				</li>
 				<li>
-					<a href>Thursday<span class="desc">4</span></a>
+					<a href>Thursday</a>
 				</li>
 				<li>
-					<a href>Friday<span class="desc">5</span></a>
+					<a href>Friday</a>
 				</li>
 			</ul>
 			<hr>
 			<h1>Directive Way</h1>
 			<ul class="nav nav-pills status-filters">
-				<li class=" active" tab-name="monday" tab>
-					<a href>Monday<span class="desc">1</span></a>
+				<li class="active" tab-name="monday" tab>
+					<a role="tab" href>Monday</a>
 				</li>
 				<li tab-name="tuesday" tab>
-					<a href>Tuesday<span class="desc">2</span></a>
+					<a role="tab" href>Tuesday</a>
 				</li>
 				<li tab-name="wednsday" tab>
-					<a href>Wednsday<span class="desc">3</span></a>
+					<a role="tab" href>Wednsday</a>
 				</li>
 				<li tab-name="thursday" tab>
-					<a href>Thursday<span class="desc">4</span></a>
+					<a role="tab" href>Thursday</a>
 				</li>
 				<li tab-name="friday" tab>
-					<a href>Friday<span class="desc">5</span></a>
+					<a role="tab" href>Friday</a>
 				</li>
 			</ul>
 			<div class="tab-content">
 				<div id="monday" class="tab-pane fade in active">
 					<h4>Monday</h4>
 				</div>
-				<div id="tuesday" class="tab-pane fade in active">
+				<div id="tuesday" class="tab-pane fade in">
 					<h4>Tuesday</h4>
 				</div>
-				<div id="wednsday" class="tab-pane fade in active">
+				<div id="wednsday" class="tab-pane fade in">
 					<h4>Wednsday</h4>
 				</div>
-				<div id="thursday" class="tab-pane fade in active">
+				<div id="thursday" class="tab-pane fade in">
 					<h4>Thursday</h4>
 				</div>
-				<div id="friday" class="tab-pane fade in active">
+				<div id="friday" class="tab-pane fade in">
 					<h4>Friday</h4>
+				</div>
+			</div>
+			<h1>Two directives on the same page</h1>
+			<ul class="nav nav-pills status-filters">
+				<li class="active" tab-name="alpha" tab>
+					<a role="tab" href>Alpha</a>
+				</li>
+				<li tab-name="beta" tab>
+					<a role="tab" href>Beta</a>
+				</li>
+				<li tab-name="gamma" tab>
+					<a role="tab" href>Gamma</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="alpha" class="tab-pane fade in active">
+					<h4>Alpha</h4>
+				</div>
+				<div id="beta" class="tab-pane fade in">
+					<h4>Beta</h4>
+				</div>
+				<div id="gamma" class="tab-pane fade in">
+					<h4>Gamma</h4>
 				</div>
 			</div>
 		</div>
